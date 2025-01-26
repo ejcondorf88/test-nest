@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - '27016:27017'
+    volumes:
+      - ./data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: pokedex
